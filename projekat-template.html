@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="sr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>[Naziv projekta] — Mihajlo Radosavljević</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--
+  ŠABLON ZA STRANICU PROJEKTA
+  ---------------------------------------------------------
+  Ovo je blueprint koji koristiš za svih 5 projekata — napravi
+  kopiju ovog fajla za svaki projekat (npr. projekat-01.html,
+  projekat-02.html...) i zameni:
+    1) Naslov projekta i meta podatke
+    2) .frame blokove sa <img src="..."> tvojim slikama
+    3) Tekst opisa u .p-desc
+    4) href dugmeta "Pogledaj u Figma-i" tvojim linkom
+  Na kraju, na index.html, promeni data-href svakog reda
+  projekta da vodi na odgovarajući fajl.
+---------------------------------------------------------- -->
+
+<div class="cursor-dot"></div>
+
+<nav class="nav">
+  <div class="nav__mark">MR.</div>
+  <ul class="nav__links">
+    <li><a href="index.html#radovi">Radovi</a></li>
+    <li><a href="index.html#o-meni">O meni</a></li>
+    <li><a href="index.html#kontakt">Kontakt</a></li>
+  </ul>
+  <div class="nav__meta">Beograd — <span data-year></span></div>
+</nav>
+
+<!-- ============ HERO PROJEKTA ============ -->
+<header class="p-hero">
+  <div class="wrap">
+    <a class="p-hero__back" href="index.html#radovi">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 7L7 17M7 17H16M7 17V8"/></svg>
+      Nazad na radove
+    </a>
+
+    <h1 class="p-hero__title">[Naziv projekta]</h1>
+
+    <div class="p-hero__meta">
+      <span>[Kategorija — npr. UI/UX]</span>
+      <span>[Godina]</span>
+      <span>[Uloga — npr. Dizajner]</span>
+    </div>
+
+    <p class="p-hero__tagline">
+      [Jedna rečenica koja opisuje suštinu projekta — šta je problem bio i šta je rešenje.]
+    </p>
+  </div>
+</header>
+
+<!-- ============ GALERIJA SLIKA ============ -->
+<section class="p-gallery">
+  <div class="wrap">
+    <!-- Glavna slika — zameni div.frame sa: <div class="frame frame--main"><img src="slika-01.jpg" alt=""></div> -->
+    <div class="frame frame--main">Glavna slika projekta (16:9)</div>
+
+    <div class="frame-grid">
+      <div class="frame frame--sm">Slika 02</div>
+      <div class="frame frame--sm">Slika 03</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ OPIS PROJEKTA ============ -->
+<section class="p-body">
+  <div class="wrap">
+    <div class="p-body__grid">
+      <dl class="p-facts reveal">
+        <dt>Klijent / kontekst</dt>
+        <dd>[Naziv klijenta ili "školski projekat"]</dd>
+
+        <dt>Godina</dt>
+        <dd>[2025]</dd>
+
+        <dt>Alati</dt>
+        <dd>[Figma, Illustrator...]</dd>
+
+        <dt>Uloga</dt>
+        <dd>[UI dizajn, istraživanje...]</dd>
+      </dl>
+
+      <div class="p-desc reveal">
+        <h3>O projektu</h3>
+        <p>
+          [Ovde ide opis projekta — koji je bio zadatak, ko je korisnik i koji je problem
+          trebalo rešiti. Piši jasno i konkretno, u par kratkih pasusa.]
+        </p>
+        <p>
+          [Drugi pasus — proces rada: istraživanje, wireframe, iteracije, i finalno rešenje
+          do kog si došao/la. Možeš dodati i šta bi sledeće unapredio/la.]
+        </p>
+
+        <div class="p-cta">
+          <!-- Zameni href='#' linkom ka gotovom Figma prototipu -->
+          <a class="btn-figma" href="#" target="_blank" rel="noopener">
+            Pogledaj u Figma-i
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SLEDEĆI PROJEKAT ============ -->
+<div class="p-next wrap">
+  <div><span>Prethodni</span><a href="#"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="transform:scaleX(-1)"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg> [Naziv]</a></div>
+  <div><span>Sledeći</span><a href="#">[Naziv] <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M17 7H8M17 7V16"/></svg></a></div>
+</div>
+
+<footer class="site-footer">
+  <div>Mihajlo Radosavljević</div>
+  <div>© <span data-year></span></div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
