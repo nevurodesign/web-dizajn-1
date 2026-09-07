@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
 :root{
@@ -157,7 +156,6 @@ button{ font:inherit; border:none; background:none; cursor:pointer; color:inheri
 }
 @keyframes scrollPulse{ 0%,100%{ transform:scaleY(.4); opacity:.4;} 50%{ transform:scaleY(1); opacity:1;} }
 
-/* ---------- marquee divider ---------- */
 .marquee{
   background:var(--cobalt); color:var(--paper);
   overflow:hidden; white-space:nowrap;
@@ -175,7 +173,6 @@ button{ font:inherit; border:none; background:none; cursor:pointer; color:inheri
 .marquee span::after{ content:'—'; color:var(--amber); }
 @keyframes marquee{ from{ transform:translateX(0);} to{ transform:translateX(-50%);} }
 
-/* ---------- section shell ---------- */
 section{ position:relative; }
 .section-head{
   display:flex; align-items:baseline; justify-content:space-between; gap:1rem;
@@ -191,7 +188,6 @@ section{ position:relative; }
 .reveal{ opacity:0; transform:translateY(28px); transition:opacity .8s var(--ease), transform .8s var(--ease); }
 .reveal.is-visible{ opacity:1; transform:none; }
 
-/* ---------- WORK / RADOVI ---------- */
 .work{ background:var(--paper); padding-bottom:clamp(3rem,6vw,5rem); }
 
 .project-row{
@@ -228,7 +224,6 @@ section{ position:relative; }
 .project-row:hover .project-row__arrow{ transform:rotate(45deg); background:var(--cobalt); border-color:var(--cobalt); }
 .project-row__arrow svg{ width:16px; height:16px; }
 
-/* floating preview thumb that follows the cursor */
 .project-preview{
   position:fixed; top:0; left:0; z-index:60; pointer-events:none;
   width:min(320px, 30vw); aspect-ratio:4/3; border-radius:14px; overflow:hidden;
@@ -246,7 +241,6 @@ section{ position:relative; }
   .project-row__tag{ display:none; }
 }
 
-/* ---------- ABOUT / O MENI ---------- */
 .about{ background:var(--cobalt); color:var(--paper); padding-bottom:clamp(3.5rem,7vw,5.5rem); }
 .about .section-head p{ color:rgba(239,240,234,.75); }
 
@@ -285,7 +279,6 @@ section{ position:relative; }
 .skill i b.on{ opacity:1; background:var(--amber); }
 .skill:hover i b.on{ background:var(--cobalt); }
 
-/* ---------- CONTACT / CTA ---------- */
 .contact{ background:var(--ink); color:var(--paper); }
 .contact__inner{
   padding-top:clamp(4rem,10vw,7rem); padding-bottom:clamp(3rem,7vw,5rem);
@@ -318,7 +311,6 @@ section{ position:relative; }
 }
 .contact__socials a:hover::after{ width:100%; }
 
-/* ================= PROJECT / BLUEPRINT PAGE ================= */
 .p-hero{
   background:var(--ink); color:var(--paper);
   padding-top:8.5rem; padding-bottom:clamp(2.5rem,6vw,4rem);
@@ -390,14 +382,12 @@ section{ position:relative; }
 .p-next a:hover svg{ transform:translateX(6px); }
 .p-next span{ font-size:.8rem; opacity:.6; display:block; margin-bottom:.4rem; }
 
-/* ---------- footer ---------- */
 .site-footer{
   background:var(--ink); color:rgba(239,240,234,.6);
   display:flex; justify-content:space-between; padding:1.6rem var(--edge); font-size:.8rem;
   flex-wrap:wrap; gap:.5rem;
 }
 
-/* ---------- reduced motion ---------- */
 @media (prefers-reduced-motion: reduce){
   *{ animation-duration:.001ms !important; animation-iteration-count:1 !important; transition-duration:.001ms !important; }
   html{ scroll-behavior:auto; }
