@@ -1,10 +1,6 @@
-// =========================================================
-// PORTFOLIO — MIHAJLO RADOSAVLJEVIĆ — interakcije i animacije
-// =========================================================
 
 const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-/* ---------- prilagođeni kursor ---------- */
 const cursor = document.querySelector('.cursor-dot');
 if (cursor && !reduceMotion && matchMedia('(hover:hover)').matches){
   window.addEventListener('mousemove', (e) => {
@@ -17,12 +13,10 @@ if (cursor && !reduceMotion && matchMedia('(hover:hover)').matches){
   });
 }
 
-/* ---------- marquee: dupliraj sadržaj radi beskonačne petlje ---------- */
 document.querySelectorAll('.marquee__track').forEach(track => {
   track.innerHTML += track.innerHTML;
 });
 
-/* ---------- scroll-reveal ---------- */
 const revealEls = document.querySelectorAll('.reveal, .skills__grid');
 if ('IntersectionObserver' in window){
   const io = new IntersectionObserver((entries) => {
@@ -38,7 +32,6 @@ if ('IntersectionObserver' in window){
   revealEls.forEach(el => el.classList.add('is-visible'));
 }
 
-/* ---------- redovi projekata: preview slika koja prati kursor ---------- */
 const preview = document.querySelector('.project-preview');
 const previewPh = preview ? preview.querySelector('.project-preview__ph') : null;
 const rows = document.querySelectorAll('.project-row');
@@ -60,7 +53,6 @@ if (preview && !reduceMotion && matchMedia('(hover:hover)').matches){
   });
 }
 
-/* ---------- klik na red projekta -> otvara template stranicu ---------- */
 rows.forEach(row => {
   const href = row.dataset.href;
   if (href){
@@ -68,7 +60,6 @@ rows.forEach(row => {
   }
 });
 
-/* ---------- godina u footeru ---------- */
 document.querySelectorAll('[data-year]').forEach(el => {
   el.textContent = new Date().getFullYear();
 });

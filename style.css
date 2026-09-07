@@ -1,7 +1,3 @@
-/* =========================================================
-   PORTFOLIO — MIHAJLO RADOSAVLJEVIĆ
-   Dizajn sistem: ink / paper / cobalt / amber
-   ========================================================= */
 
 @import url('https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 
@@ -44,7 +40,6 @@ button{ font:inherit; border:none; background:none; cursor:pointer; color:inheri
 
 .wrap{ padding-left:var(--edge); padding-right:var(--edge); }
 
-/* ---------- custom cursor dot ---------- */
 .cursor-dot{
   position:fixed; top:0; left:0; width:14px; height:14px; border-radius:50%;
   background:var(--cobalt); pointer-events:none; z-index:999;
@@ -55,7 +50,6 @@ button{ font:inherit; border:none; background:none; cursor:pointer; color:inheri
 .cursor-dot.hovering{ width:44px; height:44px; background:var(--paper); }
 @media (hover:none){ .cursor-dot{ display:none; } }
 
-/* ---------- top nav ---------- */
 .nav{
   position:fixed; top:0; left:0; right:0; z-index:100;
   display:flex; align-items:center; justify-content:space-between;
@@ -78,7 +72,6 @@ button{ font:inherit; border:none; background:none; cursor:pointer; color:inheri
 .nav__meta{ font-size:.8rem; opacity:.85; }
 @media (max-width:640px){ .nav__meta{ display:none; } }
 
-/* ---------- HERO ---------- */
 .hero{
   position:relative; min-height:100svh; background:var(--ink); color:var(--paper);
   display:flex; flex-direction:column; justify-content:center;
